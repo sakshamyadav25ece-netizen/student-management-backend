@@ -1,0 +1,20 @@
+{
+  "name": "node-backend-crud",
+  "version": "1.0.0",
+  "description": "Beginner Node.js + Express + MongoDB (Mongoose) CRUD API for products",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["nodejs", "express", "mongodb", "mongoose", "crud", "api"],
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "info": {
+    "name": "Node CRUD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "id", "value": "PASTE_PRODUCT_ID_HERE" }
+  ],
+  "item": [
+    {
+      "name": "Create product",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"name\": \"Keyboard\",\n  \"quantity\": 10,\n  \"price\": 49.99,\n  \"image\": \"https://example.com/keyboard.png\"\n}" },
+        "url": { "raw": "{{baseUrl}}/api/products", "host": ["{{baseUrl}}"], "path": ["api", "products"] }
+      }
+    },
+    {
+      "name": "Get all products",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{baseUrl}}/api/products", "host": ["{{baseUrl}}"], "path": ["api", "products"] }
+      }
+    },
+    {
+      "name": "Get product by id",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{baseUrl}}/api/products/{{id}}", "host": ["{{baseUrl}}"], "path": ["api", "products", "{{id}}"] }
+      }
+    },
+    {
+      "name": "Update product",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"price\": 59.99,\n  \"quantity\": 8\n}" },
+        "url": { "raw": "{{baseUrl}}/api/products/{{id}}", "host": ["{{baseUrl}}"], "path": ["api", "products", "{{id}}"] }
+      }
+    },
+    {
+      "name": "Delete product",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "{{baseUrl}}/api/products/{{id}}", "host": ["{{baseUrl}}"], "path": ["api", "products", "{{id}}"] }
+      }
+    }
+  ]
+}
